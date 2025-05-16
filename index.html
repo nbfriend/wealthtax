@@ -4,58 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Promo Page</title>
+  <!-- Orbitron: geometric, Tesla-inspired font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: sans-serif;
+    :root {
+      --primary: #171a20;
+      --accent: #e82127;
+      --background: #f6f6f6;
+      --button: #e82127;
+      --button-hover: #b71b1b;
+      --text: #171a20;
+      --subtle: #6e6e6e;
+    }
+    html, body {
+      height: 100%;
       margin: 0;
-      padding: 2rem;
-      text-align: center;
+      padding: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
     }
     .container {
-      max-width: 600px;
-      margin: auto;
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(23,26,32,0.07);
+      border-radius: 18px;
+      padding: 2.5rem 1.5rem 2rem 1.5rem;
+      margin: 2rem 0;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+    h1, h2 {
+      font-family: 'Orbitron', Arial, sans-serif;
+      margin: 1.2rem 0 0.5rem 0;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+    p {
+      color: var(--subtle);
+      margin-bottom: 1.2rem;
+      font-size: 1.08rem;
+      line-height: 1.6;
     }
     a.button {
-      display: inline-block;
-      margin: 1rem;
-      padding: 1rem 2rem;
-      background: #007acc;
-      color: white;
+      display: block;
+      width: 100%;
+      margin: 0.9rem 0;
+      padding: 1.1rem 0;
+      background: var(--button);
+      color: #fff;
+      font-family: 'Orbitron', Arial, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 9px;
+      transition: background 0.2s;
+      box-shadow: 0 2px 12px rgba(232,33,39,0.10);
+    }
+    a.button:hover, a.button:focus {
+      background: var(--button-hover);
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.3rem 0.7rem 1.2rem 0.7rem;
+        max-width: 98vw;
+        border-radius: 0;
+        margin: 0;
+        box-shadow: none;
+      }
+      img {
+        max-width: 95px;
+      }
     }
   </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QGB1XH2P4K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-QGB1XH2P4K');
-</script>  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGB1XH2P4K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QGB1XH2P4K');
+  </script>
 </head>
 <body>
   <div class="container">
-    <!-- Image at the top -->
-    <img src="https://nbfriend.github.io/wealthtax/WealthTaxLogo.png" alt="Tax Elon bumper sticker next to the Tesla logo" style="max-width:100%; height:auto; margin-bottom:2rem;">
-    <!-- Calls to Action -->
+    <img src="https://nbfriend.github.io/wealthtax/WealthTaxLogo.png" alt="Tax Elon bumper sticker next to the Tesla logo">
     <div>
-      <h1><a href="https://example.com/buy-magnet" class="button"
-         onclick="gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Buy Magnet' });">
-         Get the magnet
-      </a></h1> 
+      <h1>
+        <a href="https://example.com/buy-magnet" class="button"
+          onclick="gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Buy Magnet' });">
+          Get the magnet
+        </a>
+      </h1>
       <p>Show your support and spread the word.</p>
-      <h2><a href="https://example.com/donate" class="button"
-         onclick="gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Donate' });">
-         Donate
-      </a></h2>
+      <h2>
+        <a href="https://example.com/donate" class="button"
+          onclick="gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Donate' });">
+          Donate
+        </a>
+      </h2>
       <p>Support the cause to share the wealth.</p>
-      <h2><a href="https://example.com/learn-more" class="button"
-         onclick="gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Learn More' });">
-         Learn
-      </a></h2>
+      <h2>
+        <a href="https://example.com/learn-more" class="button"
+          onclick="gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Learn More' });">
+          Learn
+        </a>
+      </h2>
       <p>Get smart about the path to a wealth tax.</p>
       <p><b>Keep billionaires like Elon Musk out of ungodly power!</b></p>
     </div>
   </div>
-</body></html>
+</body>
+</html>
